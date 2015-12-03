@@ -22,6 +22,31 @@
 
 #include "CustomAssetTutorial.h"
 #include "CharacterTraitsFactory.h"
+#include "CharacterTraits.h"
+
+UCharacterTraitsFactory::UCharacterTraitsFactory()
+{
+    // We only want to create assets by importing files.
+    // Set this to true if you want to be able to create new, empty Assets from
+    // the editor.
+    bCreateNew = false;
+    
+    // Our Asset will be imported from a text file (xml), not a binary file
+    bText = true;
+    
+    // Allows us to actually use the "Import" button in the Editor for this Asset
+    bEditorImport = true;
+    
+    // Tells the Editor which file types we can import
+    Formats.Add(TEXT("xml;XML Files"));
+    
+    // Tells the Editor which Asset type this UFactory can import
+    SupportedClass = UCharacterTraits::StaticClass();
+}
+
+UCharacterTraitsFactory::~UCharacterTraitsFactory()
+{
+}
 
 // Begin UFactory Interface
 

@@ -37,8 +37,8 @@ class CUSTOMASSETTUTORIAL_API UCharacterTraitsFactory : public UFactory
 	GENERATED_BODY()
 	
 public:
-    UCharacterMovementComponent();
-    virtual ~UCharacterMovementComponent();
+    UCharacterTraitsFactory();
+    virtual ~UCharacterTraitsFactory();
     
     // Begin UFactory Interface
     
