@@ -25,6 +25,33 @@
 #include "Object.h"
 #include "CharacterTraits.generated.h"
 
+// Various enums relating to our character's traits
+
+UENUM()
+enum class EFacialHairStyle : uint8
+{
+    None,
+    Beard,
+    Moustache,
+};
+
+UENUM()
+enum class ENoseShape : uint8
+{
+    Round,
+    Pointy
+};
+
+UENUM()
+enum class EHairStyle : uint8
+{
+    Curly,
+    Spikey,
+    Wavy,
+    Long,
+    HipsterBun
+};
+
 /**
  * This is our custom Asset class. Assets don't really inherit from a base
  * Asset class, they're just UObjects. What really makes them Assets is
@@ -39,7 +66,23 @@ class CUSTOMASSETTUTORIAL_API UCharacterTraits : public UObject
 {
 	GENERATED_BODY()
 	
-	
-	
-	
+public:
+    
+    UPROPERTY()
+    FColor FacialHairColor;
+    
+    UPROPERTY()
+    EFacialHairStyle FacialHairStyle;
+    
+    UPROPERTY()
+    FColor HairColor;
+    
+    UPROPERTY()
+    EHairStyle HairStyle;
+    
+    UPROPERTY()
+    FColor EyeColor;
+    
+    UPROPERTY()
+    FColor SkinColor;
 };
