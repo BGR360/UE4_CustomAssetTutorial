@@ -23,6 +23,39 @@
 #include "CustomAssetTutorial.h"
 #include "CharacterTraitsFactory.h"
 
+// Begin UFactory Interface
 
+/** Imports the OpenStreetMapFile from the text of the .osm xml file. */
+UObject* UCharacterTraitsFactory::FactoryCreateText(UClass* InClass,
+                                                    UObject* InParent,
+                                                    FName InName,
+                                                    EObjectFlags Flags,
+                                                    UObject* Context,
+                                                    const TCHAR* Type,
+                                                    const TCHAR*& Buffer,
+                                                    const TCHAR* BufferEnd,
+                                                    FFeedbackContext* Warn)
+{
+    UObject* NewAsset = nullptr;
+    return NewAsset;
+}
 
+/** Returns whether or not the given class is supported by this factory. */
+bool UCharacterTraitsFactory::DoesSupportClass(UClass* Class)
+{
+    return false;
+}
 
+/** Returns true if this factory can deal with the file sent in. */
+bool UCharacterTraitsFactory::FactoryCanImport(const FString& Filename)
+{
+    return false;
+}
+
+/** Returns the name of the factory for menus */
+FText UCharacterTraitsFactory::GetDisplayName() const
+{
+    return FText();
+}
+
+// End UFactory Interface
