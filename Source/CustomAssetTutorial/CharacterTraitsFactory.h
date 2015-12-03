@@ -42,7 +42,7 @@ public:
     
     // Begin UFactory Interface
     
-    /** Imports the OpenStreetMapFile from the text of the .xml file. */
+    /** Imports a UCharacterTraits Asset from the text of an XML file. */
     virtual UObject* FactoryCreateText(UClass* InClass,
                                        UObject* InParent,
                                        FName InName,
